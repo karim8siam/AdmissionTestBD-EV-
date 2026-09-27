@@ -706,7 +706,7 @@ class handler(http.server.BaseHTTPRequestHandler):
         self.send_json_response({
             "success": True,
             "package": row['package_type'],
-            "message": f"🎉 TrxID: {actual_trx} সফলভাবে অনুমোদন করা হয়েছে! শিক্ষার্থীর '{pkg_label}' সাবস্ক্রিপশন আনলক করা হয়েছে।"
+            "message": f"🎉 TrxID: {actual_trx} approved successfully! The student's '{pkg_label}' subscription has been unlocked."
         })
 
     def handle_admin_manual_enroll(self, data):
@@ -716,7 +716,7 @@ class handler(http.server.BaseHTTPRequestHandler):
             package = 'combo'
         trx_id = (data.get('trx_id') or f"MANUAL-{uuid.uuid4().hex[:8].upper()}").strip().upper()
         sender_number = (data.get('sender_number') or '01644265766').strip()
-        student_name = (data.get('student_name') or 'অনুমোদিত শিক্ষার্থী').strip()
+        student_name = (data.get('student_name') or 'Enrolled Student').strip()
 
         if not identifier:
             self.send_json_response({"success": False, "message": "Please provide student email, ID, or bKash mobile number."}, status=400)
@@ -746,10 +746,10 @@ class handler(http.server.BaseHTTPRequestHandler):
         finally:
             conn.close()
 
-        pkg_label = "উভয় / কম্বো (সব টেস্ট)" if package == 'combo' else ("মেডিকেল (৯৫ টেস্ট)" if package == 'medical' else "ভার্সিটি (৯৫ টেস্ট)")
+        pkg_label = "Combo (All Tests)" if package == 'combo' else ("Medical (95 Tests)" if package == 'medical' else "Varsity (95 Tests)")
         self.send_json_response({
             "success": True,
-            "message": f"🎉 শিক্ষার্থী '{identifier}'-কে সরাসরি '{pkg_label}' সাবস্ক্রিপশন সফলভাবে প্রদান করা হয়েছে!"
+            "message": f"🎉 Student '{identifier}' has been directly granted '{pkg_label}' subscription successfully!"
         })
 
     def handle_admin_reject_payment(self, data):
@@ -986,7 +986,7 @@ class handler(http.server.BaseHTTPRequestHandler):
 
     def handle_verify_trx(self, data):
         student_id = data.get('student_id', '').strip()
-        student_name = data.get('student_name', 'শিক্ষার্থী').strip() or 'শিক্ষার্থী'
+        student_name = data.get('student_name', 'Student').strip() or 'Student'
         student_email = (data.get('email') or data.get('student_email') or '').strip().lower()
         package = (data.get('package') or data.get('package_type') or 'medical').strip().lower()
         sender_number = data.get('sender_number', '').strip()
@@ -1095,7 +1095,7 @@ class handler(http.server.BaseHTTPRequestHandler):
                     self.send_json_response({
                         "success": False,
                         "verified": False,
-                        "message": f"পেমেন্ট ফি অপর্যাপ্ত! এই প্যাকেজের জন্য ৳{int(required_price)} প্রয়োজন, কিন্তু TrxID-তে পাওয়া গেছে ৳{float(sms_log['parsed_amount'])}।"
+                        "message": f"Insufficient payment! This package requires Tk {int(required_price)}, but TrxID recorded Tk {float(sms_log['parsed_amount'])}."
                     }, status=400)
                     return
 
@@ -1126,7 +1126,7 @@ class handler(http.server.BaseHTTPRequestHandler):
         finally:
             conn.close()
 
-        pkg_title = "মেডিকেল ১০০ মডেল টেস্ট" if package == 'medical' else ("ভার্সিটি ও সমন্বিত গুচ্ছ ১০০ মডেল টেস্ট" if package == 'versity' else "মেডিকেল + ভার্সিটি মেগা কম্বো প্যাক")
+        pkg_title = "Medical 100 Model Tests" if package == 'medical' else ("Varsity & GST Science 100 Model Tests" if package == 'versity' else "Medical + Varsity Mega Combo Pack")
         
         if is_auto_verified:
             self.send_json_response({
@@ -1135,7 +1135,7 @@ class handler(http.server.BaseHTTPRequestHandler):
                 "status": "verified",
                 "pending": False,
                 "package": package,
-                "message": f"🎉 অভিনন্দন! আপনার bKash পেমেন্ট সফলভাবে স্বয়ংক্রিয়ভাবে ভেরিফাই হয়েছে। '{pkg_title}'-এর ৯৫টি প্রিমিয়াম টেস্ট সফলভাবে আনলক করা হয়েছে।"
+                "message": f"🎉 Congratulations! Your bKash payment has been automatically verified. All 95 premium model tests for '{pkg_title}' have been unlocked!"
             })
         else:
             # STRICTLY NOT VERIFIED! PENDING ADMIN MANUAL APPROVAL OR SMS FORWARDER ARRIVAL
@@ -1145,7 +1145,7 @@ class handler(http.server.BaseHTTPRequestHandler):
                 "status": "pending",
                 "pending": True,
                 "package": package,
-                "message": f"✅ আপনার বিকাশ পেমেন্ট অনুরোধ (TrxID: {trx_id}) অ্যাডমিন প্যানেলে জমা নেওয়া হয়েছে। এসএমএস স্বয়ংক্রিয়ভাবে পৌঁছালে বা অ্যাডমিন কর্তৃক অনুমোদন হওয়ামাত্রই টেস্ট আনলক হয়ে যাবে।"
+                "message": f"✅ Your bKash payment request (TrxID: {trx_id}) has been submitted for verification. Tests will unlock automatically upon SMS matching or Admin approval."
             })
 
     def handle_submit_exam(self, data):
