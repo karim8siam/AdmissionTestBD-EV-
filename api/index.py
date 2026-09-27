@@ -117,6 +117,8 @@ def ensure_database_schema(conn):
             ALTER TABLE student_enrollments ADD COLUMN IF NOT EXISTS package_type VARCHAR(32) DEFAULT 'medical';
             ALTER TABLE student_enrollments ADD COLUMN IF NOT EXISTS student_email VARCHAR(255);
             ALTER TABLE student_enrollments ADD COLUMN IF NOT EXISTS sender_number VARCHAR(32);
+            ALTER TABLE student_enrollments ADD COLUMN IF NOT EXISTS phone_number VARCHAR(32);
+            ALTER TABLE student_enrollments ALTER COLUMN phone_number DROP NOT NULL;
             ALTER TABLE student_enrollments ADD COLUMN IF NOT EXISTS status VARCHAR(32) DEFAULT 'verified';
             ALTER TABLE received_sms_logs ADD COLUMN IF NOT EXISTS is_claimed BOOLEAN DEFAULT FALSE;
             ALTER TABLE received_sms_logs ADD COLUMN IF NOT EXISTS claimed_by_student_id VARCHAR(64);
@@ -738,13 +740,13 @@ class handler(http.server.BaseHTTPRequestHandler):
             ensure_database_schema(conn)
             c = conn.cursor()
             c.execute("""
-                INSERT INTO student_enrollments (student_id, student_name, student_email, package_type, amount, sender_number, trx_id, status)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, 'verified')
+                INSERT INTO student_enrollments (student_id, student_name, student_email, package_type, amount, sender_number, phone_number, trx_id, status)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, 'verified')
                 ON CONFLICT (trx_id) DO UPDATE SET
                     status = 'verified',
                     package_type = EXCLUDED.package_type,
                     student_email = COALESCE(EXCLUDED.student_email, student_enrollments.student_email);
-            """, (student_id, student_name, student_email, package, amount, sender_number, trx_id))
+            """, (student_id, student_name, student_email, package, amount, sender_number, sender_number, trx_id))
             conn.commit()
         except Exception as e:
             self.send_json_response({"success": False, "message": str(e)}, status=500)
@@ -1116,14 +1118,14 @@ class handler(http.server.BaseHTTPRequestHandler):
             # 4. Insert or update student enrollment as verified (if SMS matched) or pending (if awaiting admin)
             status_val = 'verified' if is_auto_verified else 'pending'
             c.execute("""
-                INSERT INTO student_enrollments (student_id, student_name, student_email, package_type, amount, sender_number, trx_id, status)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                INSERT INTO student_enrollments (student_id, student_name, student_email, package_type, amount, sender_number, phone_number, trx_id, status)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
                 ON CONFLICT (trx_id) DO UPDATE SET
                     status = EXCLUDED.status,
                     student_email = COALESCE(EXCLUDED.student_email, student_enrollments.student_email),
                     package_type = EXCLUDED.package_type,
                     amount = EXCLUDED.amount;
-            """, (student_id, student_name, valid_email, package, required_price, sender_number, trx_id, status_val))
+            """, (student_id, student_name, valid_email, package, required_price, sender_number, sender_number, trx_id, status_val))
             conn.commit()
 
         except Exception as e:
@@ -1272,6 +1274,7 @@ class handler(http.server.BaseHTTPRequestHandler):
             conn.close()
 
         result = {
+            "success": True,
             "status": "success",
             "database": "postgres",
             "student_id": student_id,
@@ -1369,6 +1372,7 @@ class handler(http.server.BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     import socketserver
+    socketserver.TCPServer.allow_reuse_address = True
     server = socketserver.ThreadingTCPServer(("127.0.0.1", 8089), handler)
     print("Test Vercel API Handler running at http://127.0.0.1:8089")
     try:

@@ -1015,7 +1015,7 @@
  <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 text-xs flex items-center justify-around font-mono">
  <div>
  <div class="text-[10px] text-slate-400 font-sans">Status:</div>
- <div class="font-bold text-emerald-400">✓ allowed (Verified)</div>
+ <div class="font-bold text-emerald-400">✓ Approved (Verified)</div>
  </div>
  <div class="h-6 w-px bg-slate-800"></div>
  <div>
@@ -1240,7 +1240,7 @@
  <label class="block text-[11px] font-bold text-slate-300 mb-1">
  🔑 Step 1: Master Password 1
  </label>
- <input id="admin-input-master" type="password" required placeholder="Master Password 1 write down.." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-500 font-mono min-h-[44px]">
+ <input id="admin-input-master" type="password" required placeholder="Enter Master Password 1" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-500 font-mono min-h-[44px]">
  </div>
 
  <!-- Step 2: Secondary Password 2 -->
@@ -1257,21 +1257,21 @@
  <label class="block text-[11px] font-bold text-slate-300 mb-1">
  🔢 Step 3: Security PIN
  </label>
- <input id="admin-input-pin" type="password" inputmode="numeric" required placeholder="Security PIN" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-500 font-mono text-center min-h-[44px]">
+ <input id="admin-input-pin" type="password" inputmode="numeric" required placeholder="Enter 6-Digit PIN" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-500 font-mono text-center min-h-[44px]">
  </div>
 
  <div>
  <label class="block text-[11px] font-bold text-slate-300 mb-1">
  🤐 Step 4: Secret Word
  </label>
- <input id="admin-input-word" type="text" required placeholder="Secret Word" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-500 text-center font-mono min-h-[44px]">
+ <input id="admin-input-word" type="text" required placeholder="Enter Secret Word" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-500 text-center font-mono min-h-[44px]">
  </div>
  </div>
 
  <div id="admin-login-feedback" class="hidden text-xs p-2.5 rounded-xl"></div>
 
  <button id="btn-admin-login-submit" type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand-600 via-emerald-600 to-teal-500 hover:from-brand-500 hover:to-teal-400 text-slate-950 font-black text-xs sm:text-sm shadow-lg glow-brand transition flex items-center justify-center gap-2 min-h-[46px]">
- <span>🛡️ 4-Step Security Verification and Access</span>
+ <span>🛡️ Verify 4-Step Security & Access Dashboard</span>
  </button>
  </form>
  </div>
@@ -1295,7 +1295,7 @@
  </div>
  <div class="flex items-center gap-1.5 sm:gap-2">
  <button onclick="refreshAdminData()" class="p-2 sm:px-3 sm:py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold border border-slate-700 flex items-center gap-1.5 transition min-h-[36px]">
- <span>↻</span> <span class="hidden sm:inline">refresh</span>
+ <span>🔄</span> <span class="hidden sm:inline">Refresh</span>
  </button>
  <button onclick="handleAdminLogout()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-rose-950/80 hover:bg-rose-900 border border-rose-800 text-rose-300 text-xs font-bold transition min-h-[36px]">
  Logout
@@ -1308,29 +1308,29 @@
  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 p-3 sm:p-5 bg-slate-950/30 border-b border-slate-800">
  <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-2.5 sm:p-4 shadow-inner">
  <p class="text-[10px] sm:text-[11px] text-slate-400 font-semibold">Total Fees Collected</p>
- <p id="adm-metric-revenue" class="text-base sm:text-2xl font-black text-emerald-400 font-mono mt-0.5">0</p>
+ <p id="adm-metric-revenue" class="text-base sm:text-2xl font-black text-emerald-400 font-mono mt-0.5">Tk 0</p>
  </div>
  <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-2.5 sm:p-4 shadow-inner">
- <p class="text-[10px] sm:text-[11px] text-slate-400 font-semibold">Approved student</p>
- <p id="adm-metric-verified" class="text-base sm:text-2xl font-black text-white font-mono mt-0.5">0 people</p>
+ <p class="text-[10px] sm:text-[11px] text-slate-400 font-semibold">Enrolled Students</p>
+ <p id="adm-metric-verified" class="text-base sm:text-2xl font-black text-white font-mono mt-0.5">0 Students</p>
  </div>
  <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-2.5 sm:p-4 shadow-inner">
- <p class="text-[10px] sm:text-[11px] text-amber-400 font-semibold">Pending Request</p>
- <p id="adm-metric-pending" class="text-base sm:text-2xl font-black text-amber-400 font-mono mt-0.5">0 t</p>
+ <p class="text-[10px] sm:text-[11px] text-amber-400 font-semibold">Pending Requests</p>
+ <p id="adm-metric-pending" class="text-base sm:text-2xl font-black text-amber-400 font-mono mt-0.5">0</p>
  </div>
  <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-2.5 sm:p-4 shadow-inner">
- <p class="text-[10px] sm:text-[11px] text-slate-400 font-semibold">Total test submission</p>
- <p id="adm-metric-exams" class="text-base sm:text-2xl font-black text-teal-400 font-mono mt-0.5">0 t</p>
+ <p class="text-[10px] sm:text-[11px] text-slate-400 font-semibold">Total Exam Submissions</p>
+ <p id="adm-metric-exams" class="text-base sm:text-2xl font-black text-teal-400 font-mono mt-0.5">0</p>
  </div>
  </div>
 
  <!-- Sub Tabs (Claims vs SMS Logs) -->
  <div class="flex items-center px-3 sm:px-5 pt-2 sm:pt-3 border-b border-slate-800 gap-2 bg-slate-900/50">
  <button id="adm-tab-claims" onclick="switchAdminTab('claims')" class="px-3 sm:px-4 py-2 border-b-2 border-brand-500 text-brand-400 font-bold text-xs sm:text-sm flex items-center gap-1.5">
- <span>📋</span> Payment Request (<span id="adm-claims-count">0</span>)
+ <span>📋</span> Payment Requests (<span id="adm-claims-count">0</span>)
  </button>
  <button id="adm-tab-sms" onclick="switchAdminTab('sms')" class="px-3 sm:px-4 py-2 border-b-2 border-transparent text-slate-400 hover:text-slate-300 font-bold text-xs sm:text-sm flex items-center gap-1.5">
- <span>📱</span> bKash SMS Log (<span id="adm-sms-count">0</span>)
+ <span>📱</span> bKash SMS Logs (<span id="adm-sms-count">0</span>)
  </button>
  </div>
 
@@ -1344,7 +1344,7 @@
  <input id="adm-claims-search" oninput="filterAdminClaims(this.value)" type="text" placeholder="🔍 TrxID, Search bKash mobile number or email.." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-base sm:text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-500 font-mono min-h-[40px]">
  </div>
  <button onclick="toggleManualEnrollForm()" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-brand-300 font-bold text-xs border border-brand-500/40 flex items-center justify-center gap-1.5 transition shrink-0 min-h-[40px]">
- <span>➕</span> <span>Direct student unlock</span>
+ <span>➕</span> <span>Manual Student Unlock</span>
  </button>
  </div>
 
@@ -1352,7 +1352,7 @@
  <div id="adm-manual-enroll-card" class="hidden p-3.5 sm:p-4 bg-slate-950 border border-brand-500/40 rounded-2xl space-y-3 shadow-xl">
  <div class="flex items-center justify-between border-b border-slate-800/80 pb-2">
  <h4 class="text-xs font-bold text-white flex items-center gap-1.5">
- <span class="text-brand-400">⚡</span> <span>Payment of subscription directly to the student (for communicating students)</span>
+ <span class="text-brand-400">⚡</span> <span>Direct Manual Student Unlock (For Support & Direct Payments)</span>
  </h4>
  <button onclick="toggleManualEnrollForm()" class="text-slate-400 hover:text-white text-xs">✕</button>
  </div>
@@ -1371,7 +1371,7 @@
  </div>
  <div class="flex items-end">
  <button onclick="submitManualEnrollment()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-teal-600 hover:from-brand-500 hover:to-teal-500 text-slate-950 font-black text-xs shadow-lg transition min-h-[44px] flex items-center justify-center">
- ✓ Unlock directly
+ ✓ Unlock Now
  </button>
  </div>
  </div>
@@ -1382,13 +1382,13 @@
  <table class="w-full text-left text-xs">
  <thead>
  <tr class="text-slate-400 border-b border-slate-800 text-[11px] uppercase tracking-wider">
- <th class="pb-3 pr-2">Date and time</th>
+ <th class="pb-3 pr-2">Date & Time</th>
  <th class="pb-3 px-2">Student / Email</th>
  <th class="pb-3 px-2">bKash No</th>
- <th class="pb-3 px-2">Packages and fees</th>
+ <th class="pb-3 px-2">Package & Fee</th>
  <th class="pb-3 px-2">TrxID</th>
  <th class="pb-3 px-2">Status</th>
- <th class="pb-3 pl-2 text-right">steps (Action)</th>
+ <th class="pb-3 pl-2 text-right">Actions</th>
  </tr>
  </thead>
  <tbody id="adm-claims-tbody" class="divide-y divide-slate-800/60 font-medium">
@@ -1403,7 +1403,7 @@
  </div>
 
  <div id="adm-claims-empty" class="hidden text-center py-10 text-slate-500 text-xs">
- No payment request received.
+ No payment claims found.
  </div>
  </div>
 
@@ -1414,12 +1414,12 @@
  <table class="w-full text-left text-xs">
  <thead>
  <tr class="text-slate-400 border-b border-slate-800 text-[11px] uppercase tracking-wider">
- <th class="pb-3 pr-2">the time</th>
+ <th class="pb-3 pr-2">Time</th>
  <th class="pb-3 px-2">Sender Number</th>
  <th class="pb-3 px-2">Amount</th>
  <th class="pb-3 px-2">TrxID</th>
- <th class="pb-3 px-2">Matching status</th>
- <th class="pb-3 pl-2">original SMS Message</th>
+ <th class="pb-3 px-2">Claim Status</th>
+ <th class="pb-3 pl-2">Original SMS Message</th>
  </tr>
  </thead>
  <tbody id="adm-sms-tbody" class="divide-y divide-slate-800/60 font-mono text-[11px]">
@@ -4670,7 +4670,7 @@
  }
  } finally {
  btn.disabled = false;
- btn.innerHTML = `<span>🛡️ 4-Step Security Verification and Access</span>`;
+ btn.innerHTML = `<span>🛡️ Verify 4-Step Security & Access Dashboard</span>`;
  }
  }
 
@@ -4701,8 +4701,8 @@
  const m = data.metrics || {};
  document.getElementById('adm-metric-revenue').innerText = `Tk ${(m.total_revenue || 0).toLocaleString()}`;
  document.getElementById('adm-metric-verified').innerText = `${m.verified_students || 0} Students`;
- document.getElementById('adm-metric-pending').innerText = `${m.pending_claims || 0} T`;
- document.getElementById('adm-metric-exams').innerText = `${m.total_exams || 0} T`;
+ document.getElementById('adm-metric-pending').innerText = `${m.pending_claims || 0}`;
+ document.getElementById('adm-metric-exams').innerText = `${m.total_exams || 0}`;
 
  adminClaimsCache = data.claims || [];
  adminSmsCache = data.sms_logs || [];
@@ -4734,14 +4734,14 @@
  claims.forEach(c => {
  let statusBadge = '';
  if (c.status === 'verified') {
- statusBadge = '<span class="px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800 text-[10px] font-bold">✓ allowed</span>';
+ statusBadge = '<span class="px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800 text-[10px] font-bold">✓ Approved</span>';
  } else if (c.status === 'rejected') {
- statusBadge = '<span class="px-2 py-0.5 rounded-full bg-rose-950 text-rose-300 border border-rose-800 text-[10px] font-bold">✕ canceled</span>';
+ statusBadge = '<span class="px-2 py-0.5 rounded-full bg-rose-950 text-rose-300 border border-rose-800 text-[10px] font-bold">✕ Rejected</span>';
  } else {
- statusBadge = '<span class="px-2 py-0.5 rounded-full bg-amber-950 text-amber-300 border border-amber-800 text-[10px] font-bold animate-pulse">⏳ waiting</span>';
+ statusBadge = '<span class="px-2 py-0.5 rounded-full bg-amber-950 text-amber-300 border border-amber-800 text-[10px] font-bold animate-pulse">⏳ Pending</span>';
  }
 
- const dateStr = (c.created_at || c.enrolled_at) ? new Date(c.created_at || c.enrolled_at).toLocaleString('bn-BD', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '-';
+ const dateStr = (c.created_at || c.enrolled_at) ? new Date(c.created_at || c.enrolled_at).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '-';
  const pkg = c.package || c.package_type || 'medical';
  const amt = c.amount || (pkg === 'combo' ? 799 : 499);
 
@@ -4766,10 +4766,10 @@
  actionButtons = `
  <div class="flex items-center justify-end gap-1.5">
  <button onclick="approveClaim('${c.trx_id}', ${c.id})" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold text-xs shadow-md shadow-emerald-950/40 transition flex items-center gap-1.5">
- <span>✓</span> <span>Authorization and unlocking</span>
+ <span>✓</span> <span>Approve & Unlock</span>
  </button>
  <button onclick="rejectClaim('${c.trx_id}', ${c.id})" class="px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-rose-950 hover:text-rose-300 text-slate-400 font-bold text-xs border border-slate-700 transition">
- ✕ canceled
+ ✕ Rejected
  </button>
  </div>
  `;
@@ -4783,9 +4783,9 @@
  actionButtons = `
  <div class="space-y-0.5 text-right">
  <span class="text-xs text-emerald-400 font-bold flex items-center justify-end gap-1">
- <span>🔓</span> <span>${pkg === 'combo' ? 'Both tests are unlocked' : (pkg === 'medical' ? 'Medical Unlocked' : 'Varsity Unlocked')}</span>
+ <span>🔓</span> <span>${pkg === 'combo' ? 'Combo (All Tests) Unlocked' : (pkg === 'medical' ? 'Medical Unlocked' : 'Varsity Unlocked')}</span>
  </span>
- <span class="text-[10px] text-slate-500">allowed</span>
+ <span class="text-[10px] text-slate-500">Approved</span>
  </div>
  `;
  } else {
@@ -4828,7 +4828,7 @@
  if (c.status === 'pending') {
  mobAction = `
  <div class="space-y-1.5 pt-1">
- <label class="block text-[10px] text-slate-400 font-bold">Select the authorization package:</label>
+ <label class="block text-[10px] text-slate-400 font-bold">Select Package to Unlock:</label>
  <select id="claim-pkg-mob-${c.id}" class="w-full bg-slate-900 border border-slate-700 text-white text-xs rounded-xl p-2.5 font-bold focus:ring-1 focus:ring-emerald-500">
  <option value="medical" ${pkg === 'medical' ? 'selected' : ''}>🩺 Medical (95 Tests - 499)</option>
  <option value="versity" ${pkg === 'versity' ? 'selected' : ''}>🏛️ Varsity (95 Tests - 499)</option>
@@ -4837,10 +4837,10 @@
  </div>
  <div class="grid grid-cols-3 gap-2 pt-1">
  <button onclick="approveClaim('${c.trx_id}', ${c.id})" class="col-span-2 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold text-xs shadow-md shadow-emerald-950/40 flex items-center justify-center gap-1.5 min-h-[44px]">
- <span>✓</span> <span>Authorization and unlocking</span>
+ <span>✓</span> <span>Approve & Unlock</span>
  </button>
  <button onclick="rejectClaim('${c.trx_id}', ${c.id})" class="py-2.5 rounded-xl bg-slate-800 hover:bg-rose-950 hover:text-rose-300 text-slate-400 font-bold text-xs border border-slate-700 flex items-center justify-center min-h-[44px]">
- ✕ canceled
+ ✕ Rejected
  </button>
  </div>
  `;
@@ -4848,15 +4848,15 @@
  mobAction = `
  <div class="flex items-center justify-between p-2 rounded-xl bg-emerald-950/30 border border-emerald-900/50 text-xs">
  <span class="text-emerald-300 font-bold flex items-center gap-1">
- <span>🔓</span> <span>${pkg === 'combo' ? 'Both tests are unlocked' : (pkg === 'medical' ? 'Medical Unlocked' : 'Varsity Unlocked')}</span>
+ <span>🔓</span> <span>${pkg === 'combo' ? 'Combo (All Tests) Unlocked' : (pkg === 'medical' ? 'Medical Unlocked' : 'Varsity Unlocked')}</span>
  </span>
- <span class="text-slate-400 text-[10px]">Fee: Rs${amt}</span>
+ <span class="text-slate-400 text-[10px]">Fee: Tk ${amt}</span>
  </div>
  `;
  } else {
  mobAction = `
  <div class="flex items-center justify-between pt-1">
- <span class="text-xs text-rose-400 font-semibold">The application is rejected</span>
+ <span class="text-xs text-rose-400 font-semibold">Claim Rejected</span>
  <button onclick="approveClaim('${c.trx_id}', ${c.id})" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-emerald-600 text-slate-300 text-xs font-bold border border-slate-700">
  Reauthorization
  </button>
@@ -4900,13 +4900,13 @@
  if (cardsMobile) cardsMobile.innerHTML = '';
 
  if (!smsLogs || smsLogs.length === 0) {
- if (tbody) tbody.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-slate-500 font-sans text-xs">No forwarded yet SMS didn't come.</td></tr>`;
- if (cardsMobile) cardsMobile.innerHTML = `<div class="text-center py-6 text-slate-500 text-xs">No forwarded yet SMS didn't come.</div>`;
+ if (tbody) tbody.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-slate-500 font-sans text-xs">No forwarded bKash SMS logs received yet.</td></tr>`;
+ if (cardsMobile) cardsMobile.innerHTML = `<div class="text-center py-6 text-slate-500 text-xs">No forwarded bKash SMS logs received yet.</div>`;
  return;
  }
 
  smsLogs.forEach(s => {
- const dateStr = s.received_at ? new Date(s.received_at).toLocaleTimeString('bn-BD', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '-';
+ const dateStr = s.received_at ? new Date(s.received_at).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '-';
  const sAmt = (s.amount !== undefined && s.amount !== null && s.amount !== '') ? s.amount : (s.parsed_amount || '0');
  const sTrx = s.trx_id || s.parsed_trx_id || '-';
  const sRaw = s.raw_sms || s.raw_message || '-';
