@@ -40881,7 +40881,7 @@
         "question_num": 55,
         "subject": "Chemistry",
         "chapter": "General Chemistry and the Periodic Table",
-        "question_bn": "Which one do you use to identify fake nets?",
+        "question_bn": "Which one is used to identify counterfeit currency notes?",
         "options": [
           "UV",
           "IR",
@@ -40897,8 +40897,8 @@
         "explanation": "Correct Answer (a): UV. Reference: Prof. Hazari and Nag (General Chemistry and Periodic Table).",
         "book_reference": "Hazari and Nag, General Chemistry and Periodic Table",
         "difficulty": "Medium",
-        "question_en": "Which one do you use to identify fake nets?",
-        "question": "Which one do you use to identify fake nets?",
+        "question_en": "Which one is used to identify counterfeit currency notes?",
+        "question": "Which one is used to identify counterfeit currency notes?",
         "explanation_en": "Correct Answer (a): UV. Reference: Prof. Hazari and Nag (General Chemistry and Periodic Table).",
         "book_reference_en": "Hazari and Nag, General Chemistry and Periodic Table"
       },
