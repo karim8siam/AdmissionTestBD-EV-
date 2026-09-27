@@ -1,0 +1,66 @@
+[
+  {
+    "category": "Square Roots & Squares Shortcuts",
+    "title": "Square Root of Non-Perfect Squares (Without Calculator)",
+    "rule_bn": "For non-perfect square numbers: $\\sqrt{A} \\approx \\sqrt{N} \\pm \\frac{B}{2\\sqrt{N}}$, where $N$ is the nearest perfect square and $A = N \\pm B$.",
+    "rule_en": "For non-perfect square numbers: $\\sqrt{A} \\approx \\sqrt{N} \\pm \\frac{B}{2\\sqrt{N}}$, where $N$ is the nearest perfect square and $A = N \\pm B$.",
+    "example": "Example: $\\sqrt{10} = \\sqrt{9+1} \\approx 3 + \\frac{1}{2 \\times 3} = 3 + 0.166 \\approx 3.167$. Similarly $\\sqrt{27} = \\sqrt{25+2} \\approx 5 + \\frac{2}{10} = 5.2$.",
+    "exam_application": "Crucial for calculating velocity of freely falling bodies $v = \\sqrt{2gh}$ or time period $T = 2\\pi\\sqrt{L/g}$ in Physics without a calculator."
+  },
+  {
+    "category": "Mental Logarithms & pH Shortcuts",
+    "title": "Estimating Log Values from Fundamental Constants",
+    "rule_bn": "Key memorized values: $\\log_{10} 2 \\approx 0.3010$, $\\log_{10} 3 \\approx 0.4771$, $\\log_{10} 7 \\approx 0.8451$. Derived: $\\log 5 = 1 - \\log 2 = 0.6990$, $\\log 6 = \\log 2 + \\log 3 = 0.7781$.",
+    "rule_en": "Key memorized values: $\\log_{10} 2 \\approx 0.3010$, $\\log_{10} 3 \\approx 0.4771$, $\\log_{10} 7 \\approx 0.8451$. Derived: $\\log 5 = 1 - \\log 2 = 0.6990$, $\\log 6 = \\log 2 + \\log 3 = 0.7781$.",
+    "example": "Example: $\\log (2.5 \\times 10^{-4}) = \\log(5/2) - 4 = (0.70 - 0.30) - 4 = 0.40 - 4 = -3.6$.",
+    "exam_application": "Directly applied in Chemistry for buffer solutions and calculating $pH = -\\log[H^+]$ in under 10 seconds."
+  },
+  {
+    "category": "Fractions to Percentage Equivalents",
+    "title": "Standard Fraction Chart for Speed Calculations",
+    "rule_bn": "1/2 = 50%, 1/3 = 33.33%, 1/4 = 25%, 1/5 = 20%, 1/6 = 16.67%, 1/7 = 14.28%, 1/8 = 12.5%, 1/9 = 11.11%, 1/11 = 9.09%, 1/12 = 8.33%.",
+    "rule_en": "1/2 = 50%, 1/3 = 33.33%, 1/4 = 25%, 1/5 = 20%, 1/6 = 16.67%, 1/7 = 14.28%, 1/8 = 12.5%, 1/9 = 11.11%, 1/11 = 9.09%, 1/12 = 8.33%.",
+    "example": "If $x = 35 / 7$, directly 5. If $x = 5 / 8$, then $5 \\times 12.5\\% = 62.5\\% = 0.625$.",
+    "exam_application": "Rapid cancellation in Physics and Chemistry efficiency, percentage yield, and ratio problems."
+  },
+  {
+    "category": "Calculus Quick Limits",
+    "title": "L'Hôpital's Rule & Standard Limit Shortcuts",
+    "rule_bn": "If $\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$, differentiate numerator and denominator independently: $\\lim_{x \\to a} \\frac{f'(x)}{g'(x)}$.",
+    "rule_en": "If $\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$, differentiate numerator and denominator independently: $\\lim_{x \\to a} \\frac{f'(x)}{g'(x)}$.",
+    "example": "$\\lim_{x \\to 0} \\frac{1 - \\cos 4x}{x^2} = \\lim_{x \\to 0} \\frac{4\\sin 4x}{2x} = 8$. Direct shortcut: $\\lim_{x \\to 0} \\frac{1 - \\cos kx}{x^2} = \\frac{k^2}{2} = \\frac{16}{2} = 8$.",
+    "exam_application": "Guaranteed recurring question pattern in DU A Unit ('Ka' Unit) Mathematics."
+  },
+  {
+    "category": "Integration Speed Hacks",
+    "title": "Bounded Area of Circle & Ellipse",
+    "rule_bn": "Enclosed area of ellipse $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ is $\\pi ab$. Area in first quadrant = $\\frac{1}{4}\\pi ab$. Area of circle = $\\pi r^2$.",
+    "rule_en": "Enclosed area of ellipse $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ is $\\pi ab$. Area in first quadrant = $\\frac{1}{4}\\pi ab$. Area of circle = $\\pi r^2$.",
+    "example": "$9x^2 + 16y^2 = 144 \\Rightarrow \\frac{x^2}{16} + \\frac{y^2}{9} = 1$. Here $a=4, b=3$. Total Area = $\\pi \\times 4 \\times 3 = 12\\pi$ sq units.",
+    "exam_application": "Solves multi-step definite integral problems in 2 seconds without full integration."
+  },
+  {
+    "category": "Conic Sections Shortcuts",
+    "title": "Eccentricity ($e$) of Ellipse & Hyperbola",
+    "rule_bn": "For ellipse: $e = \\sqrt{\\frac{a^2 - b^2}{a^2}} = \\sqrt{1 - \\frac{b^2}{a^2}}$ ($a>b$). For hyperbola: $e = \\sqrt{1 + \\frac{b^2}{a^2}}$. Rectangular hyperbola: $e = \\sqrt{2}$.",
+    "rule_en": "For ellipse: $e = \\sqrt{\\frac{a^2 - b^2}{a^2}} = \\sqrt{1 - \\frac{b^2}{a^2}}$ ($a>b$). For hyperbola: $e = \\sqrt{1 + \\frac{b^2}{a^2}}$. Rectangular hyperbola: $e = \\sqrt{2}$.",
+    "example": "$25x^2 + 16y^2 = 400 \\Rightarrow \\frac{x^2}{16} + \\frac{y^2}{25} = 1$ ($b>a$). Thus $e = \\sqrt{1 - 16/25} = \\sqrt{9/25} = 3/5$.",
+    "exam_application": "Mandatory standard pattern in DU & GST Science admission exams."
+  },
+  {
+    "category": "Trigonometry Extremum Hacks",
+    "title": "Maximum & Minimum Values of $a\\cos\\theta + b\\sin\\theta$",
+    "rule_bn": "For $f(\\theta) = a\\cos\\theta + b\\sin\\theta + c$, Maximum value $= c + \\sqrt{a^2+b^2}$ and Minimum value $= c - \\sqrt{a^2+b^2}$.",
+    "rule_en": "For $f(\\theta) = a\\cos\\theta + b\\sin\\theta + c$, Maximum value $= c + \\sqrt{a^2+b^2}$ and Minimum value $= c - \\sqrt{a^2+b^2}$.",
+    "example": "For $3\\sin\\theta + 4\\cos\\theta + 5$, Max $= 5 + \\sqrt{3^2+4^2} = 5 + 5 = 10$, Min $= 5 - 5 = 0$.",
+    "exam_application": "Frequently asked in range and domain analysis of trigonometric functions."
+  },
+  {
+    "category": "Coordinate Geometry Shortcuts",
+    "title": "Perpendicular Distance Between Parallel Lines",
+    "rule_bn": "Perpendicular distance between two parallel lines $ax + by + c_1 = 0$ and $ax + by + c_2 = 0$ is $d = \\frac{|c_1 - c_2|}{\\sqrt{a^2+b^2}}$.",
+    "rule_en": "Perpendicular distance between two parallel lines $ax + by + c_1 = 0$ and $ax + by + c_2 = 0$ is $d = \\frac{|c_1 - c_2|}{\\sqrt{a^2+b^2}}$.",
+    "example": "Between $3x + 4y - 7 = 0$ and $6x + 8y + 16 = 0$ ($3x + 4y + 8 = 0$), distance $d = \\frac{|-7 - 8|}{\\sqrt{3^2+4^2}} = \\frac{15}{5} = 3$ units.",
+    "exam_application": "Instant mental geometry answer for admission tests without calculator."
+  }
+]
