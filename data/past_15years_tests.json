@@ -43764,12 +43764,12 @@
           "option_d": "$\\frac{3}{5}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
           "question": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
-          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -44156,12 +44156,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -46659,12 +46659,12 @@
           "option_d": "$\\sec x \\tan x$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
           "question": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
-          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -46967,12 +46967,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -47023,12 +47023,12 @@
           "option_d": "$0$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference": "Professor Kitab Uddin (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
           "question": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
-          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference_en": "Professor Kitab Uddin (2nd Paper)"
         },
         {
@@ -49386,12 +49386,12 @@
           "option_d": "$\\frac{3}{5}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
           "question": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
-          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -49778,12 +49778,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -52281,12 +52281,12 @@
           "option_d": "$\\sec x \\tan x$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
           "question": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
-          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -52589,12 +52589,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -52645,12 +52645,12 @@
           "option_d": "$0$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference": "Professor Kitab Uddin (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
           "question": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
-          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference_en": "Professor Kitab Uddin (2nd Paper)"
         },
         {
@@ -55008,12 +55008,12 @@
           "option_d": "$\\frac{3}{5}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
           "question": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
-          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -55400,12 +55400,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -57903,12 +57903,12 @@
           "option_d": "$\\sec x \\tan x$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
           "question": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
-          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -58211,12 +58211,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -58267,12 +58267,12 @@
           "option_d": "$0$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference": "Professor Kitab Uddin (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
           "question": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
-          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference_en": "Professor Kitab Uddin (2nd Paper)"
         },
         {
@@ -60630,12 +60630,12 @@
           "option_d": "$\\frac{3}{5}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
           "question": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
-          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -61022,12 +61022,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -63525,12 +63525,12 @@
           "option_d": "$\\sec x \\tan x$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
           "question": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
-          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -63833,12 +63833,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -63889,12 +63889,12 @@
           "option_d": "$0$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference": "Professor Kitab Uddin (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
           "question": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
-          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference_en": "Professor Kitab Uddin (2nd Paper)"
         },
         {
@@ -66252,12 +66252,12 @@
           "option_d": "$\\frac{3}{5}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
           "question": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
-          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -66644,12 +66644,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -69147,12 +69147,12 @@
           "option_d": "$\\sec x \\tan x$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
           "question": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
-          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -69455,12 +69455,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -69511,12 +69511,12 @@
           "option_d": "$0$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference": "Professor Kitab Uddin (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
           "question": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
-          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference_en": "Professor Kitab Uddin (2nd Paper)"
         },
         {
@@ -71874,12 +71874,12 @@
           "option_d": "$\\frac{3}{5}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
           "question": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
-          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -72266,12 +72266,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -74769,12 +74769,12 @@
           "option_d": "$\\sec x \\tan x$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
           "question": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
-          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -75077,12 +75077,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -75133,12 +75133,12 @@
           "option_d": "$0$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference": "Professor Kitab Uddin (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
           "question": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
-          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference_en": "Professor Kitab Uddin (2nd Paper)"
         },
         {
@@ -77496,12 +77496,12 @@
           "option_d": "$\\frac{3}{5}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
           "question": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
-          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -77888,12 +77888,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -80391,12 +80391,12 @@
           "option_d": "$\\sec x \\tan x$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
           "question": "What is the value of $\\frac{d}{dx}(\\ln|\\sec x + \\tan x|)$?",
-          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$।",
+          "explanation_en": "$\\frac{d}{dx}(\\ln|\\sec x + \\tan x|) = \\frac{\\sec x\\tan x + \\sec^2 x}{\\sec x + \\tan x} = \\sec x$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -80699,12 +80699,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {
@@ -80755,12 +80755,12 @@
           "option_d": "$0$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference": "Professor Kitab Uddin (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
           "question": "If the angle between two equal forces $P$ acting on the same point is $120^\\circ$, what is their magnitude?",
-          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$।",
+          "explanation_en": "$R = \\sqrt{P^2 + P^2 + 2P^2\\cos 120^\\circ} = \\sqrt{2P^2 - P^2} = P$.",
           "book_reference_en": "Professor Kitab Uddin (2nd Paper)"
         },
         {
@@ -83118,12 +83118,12 @@
           "option_d": "$\\frac{3}{5}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference": "Professor Ketab Uddin (1st Paper)",
           "difficulty": "Medium",
           "question_en": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
           "question": "If $\\tan\\theta = \\frac{3}{4}$ and $\\theta$ is an acute angle, what is the value of $\\sin 2\\theta$?",
-          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$।",
+          "explanation_en": "$\\sin 2\\theta = \\frac{2\\tan\\theta}{1+\\tan^2\\theta} = \\frac{2(3/4)}{1 + 9/16} = \\frac{3/2}{25/16} = \\frac{24}{25}$.",
           "book_reference_en": "Professor Ketab Uddin (1st Paper)"
         },
         {
@@ -83510,12 +83510,12 @@
           "option_d": "$\\frac{\\pi}{3}$",
           "correct_option": "A",
           "correct_index": 0,
-          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference": "SU Ahmed and MA Jabbar (2nd Paper)",
           "difficulty": "Medium",
           "question_en": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
           "question": "What is the value of $\\tan^{-1}(1/2) + \\tan^{-1}(1/3)$?",
-          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$।",
+          "explanation_en": "$\\tan^{-1}\\left(\\frac{1/2 + 1/3}{1 - 1/6}\\right) = \\tan^{-1}(1) = \\frac{\\pi}{4}$.",
           "book_reference_en": "SU Ahmed and MA Jabbar (2nd Paper)"
         },
         {

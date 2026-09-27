@@ -114,6 +114,12 @@ def ensure_database_schema(conn):
                 status VARCHAR(32) DEFAULT 'verified',
                 enrolled_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
             );
+            ALTER TABLE student_enrollments ADD COLUMN IF NOT EXISTS package_type VARCHAR(32) DEFAULT 'medical';
+            ALTER TABLE student_enrollments ADD COLUMN IF NOT EXISTS student_email VARCHAR(255);
+            ALTER TABLE student_enrollments ADD COLUMN IF NOT EXISTS sender_number VARCHAR(32);
+            ALTER TABLE student_enrollments ADD COLUMN IF NOT EXISTS status VARCHAR(32) DEFAULT 'verified';
+            ALTER TABLE received_sms_logs ADD COLUMN IF NOT EXISTS is_claimed BOOLEAN DEFAULT FALSE;
+            ALTER TABLE received_sms_logs ADD COLUMN IF NOT EXISTS claimed_by_student_id VARCHAR(64);
         """)
         conn.commit()
         _SCHEMA_ENSURED = True
