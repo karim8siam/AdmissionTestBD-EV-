@@ -1739,6 +1739,13 @@
 
   async function syncPaymentStatus() {
     try {
+      // Ad Traffic Optimization: Skip DB check on initial visit for brand-new users with no payment history
+      const hasHistory = appState.userEmail ||
+                         localStorage.getItem('admission_paid_med') === 'true' ||
+                         localStorage.getItem('admission_paid_var') === 'true' ||
+                         localStorage.getItem('admission_has_pending') === 'true';
+      if (!hasHistory) return;
+
       const emailQuery = appState.userEmail ? `&email=${encodeURIComponent(appState.userEmail)}` : '';
       const res = await fetch(`/api/payment/status?student_id=${appState.studentId}${emailQuery}`);
       if (res.ok) {
@@ -2793,7 +2800,7 @@
  textEl.innerText = "✓ Copied!";
  setTimeout(() => { textEl.innerText = "Copy"; }, 2500);
  }
- showToast("Vikas number '01644265766' is copied to clipboard.", "success");
+ showToast("bKash number '01644265766' is copied to clipboard.", "success");
  }).catch(() => {
  showToast("bKash No: 01644265766", "info");
  });
@@ -2808,7 +2815,7 @@
  if (!trxId || trxId.length < 6) {
  if (feedback) {
  feedback.className = "text-xs p-3 rounded-xl bg-rose-950/80 border border-rose-800 text-rose-200 block";
- feedback.innerText = "⚠️ please SMS-This is correct and complete TrxID Write (at least 6-12 digits/letters).";
+ feedback.innerText = "⚠️ Please enter a valid and complete TrxID (at least 6-12 digits/characters).";
  }
  return;
  }
