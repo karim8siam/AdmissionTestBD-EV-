@@ -1666,182 +1666,212 @@
  setupMobileExitGuard();
  }
 
- let paymentPollInterval = null;
+  let paymentPollInterval = null;
+  let paymentPollCount = 0;
 
- function startPaymentStatusPolling() {
- if (paymentPollInterval) clearInterval(paymentPollInterval);
- paymentPollInterval = setInterval(async () => {
- try {
- const emailQuery = appState.userEmail ? `&email=${encodeURIComponent(appState.userEmail)}` : '';
- const res = await fetch(`/api/payment/status?student_id=${appState.studentId}${emailQuery}`);
- if (res.ok) {
- const data = await res.json();
- let newlyUnlocked = false;
+  function startPaymentStatusPolling() {
+    if (paymentPollInterval) clearInterval(paymentPollInterval);
+    paymentPollCount = 0;
+    paymentPollInterval = setInterval(async () => {
+      paymentPollCount++;
+      // Stop polling after 25 attempts (~5 minutes) if no update
+      if (paymentPollCount > 25) {
+        clearInterval(paymentPollInterval);
+        paymentPollInterval = null;
+        return;
+      }
+      try {
+        const emailQuery = appState.userEmail ? `&email=${encodeURIComponent(appState.userEmail)}` : '';
+        const res = await fetch(`/api/payment/status?student_id=${appState.studentId}${emailQuery}`);
+        if (res.ok) {
+          const data = await res.json();
+          let newlyUnlocked = false;
 
- const isMed = !!(data.medical_enrolled || data.combo_enrolled);
- const isVar = !!(data.versity_enrolled || data.combo_enrolled);
- appState.pendingPackages = data.pending_packages || [];
+          const isMed = !!(data.medical_enrolled || data.combo_enrolled);
+          const isVar = !!(data.versity_enrolled || data.combo_enrolled);
+          appState.pendingPackages = data.pending_packages || [];
 
- if (isMed && !appState.isMedicalPaid) {
- appState.isMedicalPaid = true;
- localStorage.setItem('admission_paid_med', 'true');
- appState.unlockedMed = getMaxUnlocked('medical');
- newlyUnlocked = true;
- }
- if (isVar && !appState.isVersityPaid) {
- appState.isVersityPaid = true;
- localStorage.setItem('admission_paid_var', 'true');
- appState.unlockedVar = getMaxUnlocked('versity');
- newlyUnlocked = true;
- }
+          if (isMed && !appState.isMedicalPaid) {
+            appState.isMedicalPaid = true;
+            localStorage.setItem('admission_paid_med', 'true');
+            appState.unlockedMed = getMaxUnlocked('medical');
+            newlyUnlocked = true;
+          }
+          if (isVar && !appState.isVersityPaid) {
+            appState.isVersityPaid = true;
+            localStorage.setItem('admission_paid_var', 'true');
+            appState.unlockedVar = getMaxUnlocked('versity');
+            newlyUnlocked = true;
+          }
 
- if (!data.has_pending) {
- localStorage.removeItem('admission_has_pending');
- }
+          if (!data.has_pending) {
+            localStorage.removeItem('admission_has_pending');
+            clearInterval(paymentPollInterval);
+            paymentPollInterval = null;
+          }
 
- if (newlyUnlocked) {
- if (appState.isMedicalPaid && appState.isVersityPaid) {
- clearInterval(paymentPollInterval);
- paymentPollInterval = null;
- }
- updateUnlockedBadges();
- populateTestDropdown();
- loadCurrentSelectedTest();
- renderTestGridCards();
+          if (newlyUnlocked) {
+            if (appState.isMedicalPaid && appState.isVersityPaid) {
+              clearInterval(paymentPollInterval);
+              paymentPollInterval = null;
+            }
+            updateUnlockedBadges();
+            populateTestDropdown();
+            loadCurrentSelectedTest();
+            renderTestGridCards();
 
- // Refresh modal view if open
- const paywallModal = document.getElementById('bkash-paywall-modal');
- if (paywallModal && !paywallModal.classList.contains('hidden')) {
- selectBkashPackage(selectedBkashPackage);
- }
+            const paywallModal = document.getElementById('bkash-paywall-modal');
+            if (paywallModal && !paywallModal.classList.contains('hidden')) {
+              selectBkashPackage(selectedBkashPackage);
+            }
 
- if (typeof confetti === 'function') {
- confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
- }
- showToast("🎉 Congratulations! Your payment has been approved and the model test has been unlocked!", "success");
- }
- }
- } catch (e) {
- // quiet polling
- }
- }, 5000);
- }
+            if (typeof confetti === 'function') {
+              confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
+            }
+            showToast("🎉 Congratulations! Your payment has been approved and the model test has been unlocked!", "success");
+          }
+        }
+      } catch (e) {
+        // quiet polling
+      }
+    }, 12000);
+  }
 
- async function syncPaymentStatus() {
- try {
- const emailQuery = appState.userEmail ? `&email=${encodeURIComponent(appState.userEmail)}` : '';
- const res = await fetch(`/api/payment/status?student_id=${appState.studentId}${emailQuery}`);
- if (res.ok) {
- const data = await res.json();
- const isMed = !!(data.medical_enrolled || data.combo_enrolled);
- const isVar = !!(data.versity_enrolled || data.combo_enrolled);
- appState.isMedicalPaid = isMed;
- appState.isVersityPaid = isVar;
- appState.pendingPackages = data.pending_packages || [];
+  async function syncPaymentStatus() {
+    try {
+      const emailQuery = appState.userEmail ? `&email=${encodeURIComponent(appState.userEmail)}` : '';
+      const res = await fetch(`/api/payment/status?student_id=${appState.studentId}${emailQuery}`);
+      if (res.ok) {
+        const data = await res.json();
+        const isMed = !!(data.medical_enrolled || data.combo_enrolled);
+        const isVar = !!(data.versity_enrolled || data.combo_enrolled);
+        appState.isMedicalPaid = isMed;
+        appState.isVersityPaid = isVar;
+        appState.pendingPackages = data.pending_packages || [];
 
- if (isMed) {
- localStorage.setItem('admission_paid_med', 'true');
- } else {
- localStorage.removeItem('admission_paid_med');
- }
- if (isVar) {
- localStorage.setItem('admission_paid_var', 'true');
- } else {
- localStorage.removeItem('admission_paid_var');
- }
- appState.unlockedMed = getMaxUnlocked('medical');
- appState.unlockedVar = getMaxUnlocked('versity');
+        if (isMed) {
+          localStorage.setItem('admission_paid_med', 'true');
+          appState.unlockedMed = getMaxUnlocked('medical');
+        }
+        if (isVar) {
+          localStorage.setItem('admission_paid_var', 'true');
+          appState.unlockedVar = getMaxUnlocked('versity');
+        }
 
- if (data.has_pending) {
- localStorage.setItem('admission_has_pending', 'true');
- } else {
- localStorage.removeItem('admission_has_pending');
- }
+        updateUnlockedBadges();
+        populateTestDropdown();
+        loadCurrentSelectedTest();
+        renderTestGridCards();
 
- updateUnlockedBadges();
- populateTestDropdown();
- renderTestGridCards();
+        const paywallModal = document.getElementById('bkash-paywall-modal');
+        if (paywallModal && !paywallModal.classList.contains('hidden')) {
+          selectBkashPackage(selectedBkashPackage);
+        }
 
- // If paywall modal is currently open, refresh its view
- const paywallModal = document.getElementById('bkash-paywall-modal');
- if (paywallModal && !paywallModal.classList.contains('hidden')) {
- selectBkashPackage(selectedBkashPackage);
- }
+        // ONLY poll if student has an active submitted claim awaiting admin approval
+        if (data.has_pending || localStorage.getItem('admission_has_pending') === 'true') {
+          startPaymentStatusPolling();
+        }
+      }
+    } catch (e) {
+      console.warn('Payment status sync offline, using local cache.');
+    }
+  }
 
- // If student has pending claims or unpaid tests, keep polling in background
- if (data.has_pending || localStorage.getItem('admission_has_pending') === 'true' || !appState.isMedicalPaid || !appState.isVersityPaid) {
- startPaymentStatusPolling();
- }
- }
- } catch (e) {
- console.warn('Payment status sync offline, using local cache.');
- }
- }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+  } else {
+    initApp();
+  }
 
- if (document.readyState === 'loading') {
- document.addEventListener('DOMContentLoaded', initApp);
- } else {
- initApp();
- }
+  // Datasets tracking for lazy on-demand loading
+  const loadedDatasets = {
+    medical: false,
+    versity: false,
+    past_15years: false,
+    nocalc: false,
+    textbooks: false
+  };
 
- async function loadAllPlatformData() {
- // 1. Fetch Medical tests first for immediate UI readiness
- try {
- const medRes = await fetch('/data/medical_100_tests.json');
- appState.medicalTests = await medRes.json();
- if (appState.currentStream === 'medical') {
- populateTestDropdown();
- loadCurrentSelectedTest();
- }
- } catch (err) {
- console.warn("Medical tests load error:", err);
- }
+  async function loadStreamDataset(stream) {
+    if (stream === 'medical' && !loadedDatasets.medical) {
+      try {
+        const medRes = await fetch('/data/medical_100_tests.json');
+        appState.medicalTests = await medRes.json();
+        loadedDatasets.medical = true;
+        if (appState.currentStream === 'medical') {
+          populateTestDropdown();
+          loadCurrentSelectedTest();
+          if (typeof renderTestGridCards === 'function') renderTestGridCards();
+        }
+      } catch (err) {
+        console.warn("Medical tests load error:", err);
+      }
+    } else if (stream === 'versity' && !loadedDatasets.versity) {
+      try {
+        const varRes = await fetch('/data/versity_100_tests.json');
+        appState.versityTests = await varRes.json();
+        loadedDatasets.versity = true;
+        if (appState.currentStream === 'versity') {
+          populateTestDropdown();
+          loadCurrentSelectedTest();
+          if (typeof renderTestGridCards === 'function') renderTestGridCards();
+        }
+      } catch (e) {
+        console.warn("Varsity data error:", e);
+      }
+    } else if (stream === 'past_15years' && !loadedDatasets.past_15years) {
+      try {
+        const pastRes = await fetch('/data/past_15years_tests.json');
+        const data = await pastRes.json();
+        if (data && (data.medical || data.versity)) {
+          appState.past15YearsData = data;
+        } else if (Array.isArray(data)) {
+          appState.past15YearsData = { medical: data, versity: [] };
+        }
+        loadedDatasets.past_15years = true;
+        populatePastYearSelect();
+        if (appState.currentStream === 'past_15years') renderPastYearView();
+      } catch (e) {
+        console.warn("Past 15 years error:", e);
+      }
+    } else if (stream === 'nocalc' && !loadedDatasets.nocalc) {
+      try {
+        const res = await fetch('/data/nocalc_tricks_kb.json');
+        appState.nocalcTricks = await res.json();
+        loadedDatasets.nocalc = true;
+        renderNocalcTricks();
+      } catch (e) {
+        console.warn("Tricks error:", e);
+      }
+    } else if (stream === 'textbooks' && !loadedDatasets.textbooks) {
+      try {
+        const res = await fetch('/data/medical_textbooks_kb.json');
+        appState.textbookKb = await res.json();
+        loadedDatasets.textbooks = true;
+        if (appState.currentStream === 'textbooks') renderKbFacts();
+      } catch (e) {
+        console.warn("Textbooks error:", e);
+      }
+    }
+  }
 
- // 2. Fetch remaining data progressively in background without blocking
- fetch('/data/versity_100_tests.json')
- .then(r => r.json())
- .then(data => {
- appState.versityTests = data;
- if (appState.currentStream === 'versity') {
- populateTestDropdown();
- loadCurrentSelectedTest();
- }
- })
- .catch(e => console.warn("Varsity data error:", e));
+  async function loadAllPlatformData() {
+    // 1. Immediately load ONLY the active stream dataset
+    const activeStream = appState.currentStream || 'medical';
+    await loadStreamDataset(activeStream);
 
- fetch('/data/past_15years_tests.json')
- .then(r => r.json())
- .then(data => {
- if (data && (data.medical || data.versity)) {
- appState.past15YearsData = data;
- } else if (Array.isArray(data)) {
- appState.past15YearsData = { medical: data, versity: [] };
- }
- populatePastYearSelect();
- if (appState.currentStream === 'past_15years') renderPastYearView();
- })
- .catch(e => console.warn("Past 15 years error:", e));
+    // 2. Schedule gentle sequential background prefetching after 3 seconds of idle time
+    setTimeout(() => {
+      const remainingStreams = ['medical', 'versity', 'past_15years', 'nocalc', 'textbooks'].filter(s => s !== activeStream);
+      let p = Promise.resolve();
+      remainingStreams.forEach(stream => {
+        p = p.then(() => new Promise(resolve => setTimeout(resolve, 1000)))
+             .then(() => loadStreamDataset(stream));
+      });
+    }, 3000);
+  }
 
- fetch('/data/nocalc_tricks_kb.json')
- .then(r => r.json())
- .then(data => {
- appState.nocalcTricks = data;
- renderNocalcTricks();
- })
- .catch(e => console.warn("Tricks error:", e));
-
- fetch('/data/medical_textbooks_kb.json')
- .then(r => r.json())
- .then(data => {
- appState.textbookKb = data;
- if (appState.currentStream === 'textbooks') renderKbFacts();
- })
- .catch(e => console.warn("Textbooks error:", e));
- }
-
- // ============================================
- // ADMISSION SESSION MANAGEMENT
- // ============================================
  function changeAdmissionSession(newSession) {
  appState.selectedSession = newSession;
  localStorage.setItem('admission_selected_session', newSession);
@@ -1922,6 +1952,11 @@
 
  function switchStream(stream) {
  appState.currentStream = stream;
+
+ // Ensure this stream dataset is loaded on-demand
+ if (typeof loadStreamDataset === "function" && !loadedDatasets[stream]) {
+ loadStreamDataset(stream);
+ }
 
  // Update Nav Button Styles immediately
  syncNavButtons(stream);
