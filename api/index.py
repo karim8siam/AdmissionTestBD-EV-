@@ -11,10 +11,7 @@ import hmac
 from datetime import datetime, date
 
 # Neon PostgreSQL connection URL
-NEON_URL = os.environ.get(
-    "DATABASE_URL",
-    "postgresql://neondb_owner:npg_okZQmgr0e1fv@ep-frosty-grass-b5eq2vv9-pooler.c-7.us-east-2.aws.neon.tech/neondb?sslmode=require"
-)
+NEON_URL = os.environ.get("DATABASE_URL", "")
 
 # 4-Step Security Credentials for Admin Panel
 ADMIN_MASTER_PASSWORD_1 = os.environ.get("ADMIN_MASTER_PASSWORD_1", "4990OrpU4990!HelloWorld123")
@@ -36,7 +33,10 @@ _SCHEMA_ENSURED = False
 def get_db_connection():
     """Connects to Neon PostgreSQL pooler."""
     import psycopg2
-    conn = psycopg2.connect(NEON_URL, connect_timeout=10)
+    db_url = os.environ.get("DATABASE_URL") or NEON_URL
+    if not db_url:
+        raise ValueError("DATABASE_URL is not set. Please configure it in your Vercel Environment Variables.")
+    conn = psycopg2.connect(db_url, connect_timeout=10)
     return conn
 
 def hash_password(password: str) -> str:

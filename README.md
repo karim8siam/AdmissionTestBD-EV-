@@ -68,6 +68,6 @@ Full-length, AI-powered Medical & University Admission Mock Test Platform design
    - **Name**: `DATABASE_URL`
    - **Value**:
      ```text
-     postgresql://neondb_owner:npg_okZQmgr0e1fv@ep-frosty-grass-b5eq2vv9-pooler.c-7.us-east-2.aws.neon.tech/neondb?sslmode=require
+     postgresql://neondb_owner:<YOUR_NEON_PASSWORD>@ep-frosty-grass-b5eq2vv9-pooler.c-7.us-east-2.aws.neon.tech/neondb?sslmode=require
      ```
 5. Click **"Deploy"**. The site will be live within seconds!
