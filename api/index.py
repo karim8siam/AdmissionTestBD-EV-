@@ -1203,7 +1203,6 @@ class handler(http.server.BaseHTTPRequestHandler):
         import psycopg2.extras
         conn = get_db_connection()
         try:
-            ensure_database_schema(conn)
             c = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
             c.execute("""
@@ -1226,46 +1225,31 @@ class handler(http.server.BaseHTTPRequestHandler):
             conn.commit()
 
             c.execute("""
-                SELECT COUNT(*) + 1 AS rank FROM exam_submissions
-                WHERE test_id = %s AND subject_mode = %s AND session = %s
-                  AND (score > %s OR (score = %s AND time_taken_seconds < %s));
-            """, (test_id, subject_mode, session, score, score, time_taken_seconds))
-            session_rank = c.fetchone()['rank']
-
-            c.execute("SELECT COUNT(*) AS total FROM exam_submissions WHERE test_id = %s AND subject_mode = %s AND session = %s;",
-                      (test_id, subject_mode, session))
-            session_total = c.fetchone()['total']
-            session_percentile = round(((session_total - session_rank) / session_total) * 100, 2) if session_total > 0 else 100.0
-
-            c.execute("""
-                SELECT COUNT(*) + 1 AS rank FROM exam_submissions
-                WHERE test_id = %s AND subject_mode = %s
-                  AND (score > %s OR (score = %s AND time_taken_seconds < %s));
-            """, (test_id, subject_mode, score, score, time_taken_seconds))
-            all_time_rank = c.fetchone()['rank']
-
-            c.execute("SELECT COUNT(*) AS total FROM exam_submissions WHERE test_id = %s AND subject_mode = %s;",
-                      (test_id, subject_mode))
-            all_time_total = c.fetchone()['total']
-            all_time_percentile = round(((all_time_total - all_time_rank) / all_time_total) * 100, 2) if all_time_total > 0 else 100.0
-
-            c.execute("""
-                SELECT student_id, student_name, target_college, session, score, percentage, time_taken_seconds, submitted_at
+                SELECT
+                    COUNT(*) FILTER (WHERE session = %(session)s AND (score > %(score)s OR (score = %(score)s AND time_taken_seconds < %(time)s))) + 1 AS session_rank,
+                    COUNT(*) FILTER (WHERE session = %(session)s) AS session_total,
+                    COUNT(*) FILTER (WHERE (score > %(score)s OR (score = %(score)s AND time_taken_seconds < %(time)s))) + 1 AS all_time_rank,
+                    COUNT(*) AS all_time_total
                 FROM exam_submissions
-                WHERE test_id = %s AND subject_mode = %s AND session = %s
-                ORDER BY score DESC, time_taken_seconds ASC
-                LIMIT 10;
-            """, (test_id, subject_mode, session))
-            session_leaderboard = [dict(r) for r in c.fetchall()]
+                WHERE test_id = %(test_id)s AND subject_mode = %(subject_mode)s;
+            """, {
+                "session": session,
+                "score": score,
+                "time": time_taken_seconds,
+                "test_id": test_id,
+                "subject_mode": subject_mode
+            })
+            stats = c.fetchone() or {}
+            session_rank = stats.get('session_rank', 1)
+            session_total = max(1, stats.get('session_total', 1))
+            session_percentile = round(((session_total - session_rank) / session_total) * 100, 2)
 
-            c.execute("""
-                SELECT student_id, student_name, target_college, session, score, percentage, time_taken_seconds, submitted_at
-                FROM exam_submissions
-                WHERE test_id = %s AND subject_mode = %s
-                ORDER BY score DESC, time_taken_seconds ASC
-                LIMIT 10;
-            """, (test_id, subject_mode))
-            all_time_leaderboard = [dict(r) for r in c.fetchall()]
+            all_time_rank = stats.get('all_time_rank', 1)
+            all_time_total = max(1, stats.get('all_time_total', 1))
+            all_time_percentile = round(((all_time_total - all_time_rank) / all_time_total) * 100, 2)
+
+            session_leaderboard = []
+            all_time_leaderboard = []
 
         except Exception as e:
             self.send_json_response({"status": "error", "message": str(e)}, status=500)

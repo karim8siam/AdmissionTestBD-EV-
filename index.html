@@ -3441,7 +3441,12 @@
  updateUnlockedBadges();
  populateTestDropdown();
 
- // Render Scoreboard & Review Feed immediately
+ // Switch to Results view FIRST - Instant 0ms transition!
+ document.getElementById('exam-active-card').classList.add('hidden');
+ document.getElementById('exam-results-card').classList.remove('hidden');
+ window.scrollTo({ top: 120, behavior: 'smooth' });
+
+ // Render Scoreboard header & stats immediately
  renderExamScoreboard({
  score,
  percentage,
@@ -3454,16 +3459,16 @@
  nextUnlocked
  });
 
- // Switch to Results view
- document.getElementById('exam-active-card').classList.add('hidden');
- document.getElementById('exam-results-card').classList.remove('hidden');
-
- window.scrollTo({ top: 120, behavior: 'smooth' });
-
  // Trigger Confetti Celebration on good score / unlock
  if (typeof confetti === 'function') {
  confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
  }
+
+ // Defer heavy 100-question review cards and KaTeX rendering so UI responds instantly
+ setTimeout(() => {
+ renderReviewCards(current.questions);
+ renderSubjectAutopsyChart(current.questions);
+ }, 10);
 
  // Live ranking sync with Neon PostgreSQL database
  const mode = (appState.currentStream === 'medical') ? 'FullExam' : ((appState.currentStream === 'versity') ? 'GSTExam' : 'Past15Years');
@@ -3563,21 +3568,15 @@
  }
  }
 
- // Render Review Cards
- renderReviewCards(current.questions);
-
- // Render Subject Chart
- renderSubjectAutopsyChart(current.questions);
  }
 
  function renderReviewCards(questions) {
  const container = document.getElementById('results-review-feed');
  if (!container) return;
- container.innerHTML = '';
 
  const optionLetters = ['A', 'B', 'C', 'D'];
 
- questions.forEach((q, idx) => {
+ const cardsHtml = questions.map((q, idx) => {
  const studentAns = appState.userAnswers[idx];
  const correctIndex = (q.correct_index !== undefined) ? q.correct_index : 0;
  const opts = q.options ? q.options : [q.option_a, q.option_b, q.option_c, q.option_d];
@@ -3648,8 +3647,10 @@
  </div>
  `;
 
- container.appendChild(card);
- });
+ return card.outerHTML;
+ }).join('');
+
+ container.innerHTML = cardsHtml;
 
  if (window.renderMathInElement) {
  window.renderMathInElement(container, {
